@@ -3,12 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const agregarBtn = document.getElementById('AgregarBtn');
     const lista = document.getElementById('lista');
 
-  // Ayuda a detectar si el id no coincide
-    if (!agregarBtn) {
-        console.error('No se encontró #AgregarBtn. Revisa el id en el HTML.');
-    return;
-    }
-
     agregarBtn.addEventListener('click', () => {
     const texto = input.value.trim();
     if (!texto) return;
@@ -16,6 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const li = document.createElement('li');
     li.textContent = texto;
     lista.appendChild(li);
+    
+    const eliminarBtn = document.createElement('button');
+    eliminarBtn.textContent = 'Eliminar';
+    eliminarBtn.addEventListener('click', () => {
+    lista.removeChild(li);
+    });
+    li.appendChild(eliminarBtn);
 
     input.value = '';
     input.focus();

@@ -1,0 +1,13 @@
+<h1>Hola</h1>
+
+<input [(ngModel)]="nuevoElemento" placeholder="Escribe algo">
+<button (click)="agregar()">Agregar</button>
+
+<ul>
+    <li *ngFor="let item of elementos; let i = index">
+        {{ item }}
+        <button (click)="borrar(i)">Eliminar</button>
+    </li>
+</ul>
+
+<router-outlet />

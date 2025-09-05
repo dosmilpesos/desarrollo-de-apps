@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './texto.component.css'
 })
 export class TextoComponent {
-  
+  cambiarTexto() {
+    document.getElementById('titulo')!.innerText = 'cambiado';
+  }
 }

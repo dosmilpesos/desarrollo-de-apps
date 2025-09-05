@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 import { TypescriptComponent } from "./paginas/typescript/typescript.component";
 import { DoomComponent } from "./paginas/doom/doom.component";
 import { TextoComponent } from "./paginas/texto/texto.component";
+import { SumaComponent } from "./paginas/suma/suma.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, CommonModule, TextoComponent, TypescriptComponent, DoomComponent], //poner los imports de angular
+  imports: [RouterOutlet, FormsModule, CommonModule, TextoComponent, TypescriptComponent, DoomComponent, SumaComponent], //poner los imports de angular
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

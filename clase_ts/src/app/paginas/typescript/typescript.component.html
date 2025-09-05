@@ -1,0 +1,11 @@
+<h1>Typescript</h1>
+
+<input [(ngModel)]="nuevoElemento" placeholder="Escribe algo">
+<button (click)="agregar()">Agregar</button>
+
+<ul>
+    <li *ngFor="let item of elementos; let i = index">
+        {{ item }} <!-- imprime variable -->
+        <button (click)="borrar(i)">Eliminar</button>
+    </li>
+</ul>
